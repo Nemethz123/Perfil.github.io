@@ -1,0 +1,223 @@
+
+
+
+.menú{
+    background-color: rgb(226, 226, 226);
+    font-size: 1rem;
+font-size: 200%;
+font-family:cursive;
+text-align: left;
+}
+.menú ul{
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+.menú li{
+    display: inline-block;
+}
+.menú a{
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 5px 10px;
+    text-decoration:none;
+}
+
+.menú ul li a:hover{
+    background-color: #d3d3d3;
+}
+.item1{
+    float:none;
+}
+.menú ul li ul{
+    flex-direction: column;
+    display: flex;
+}
+.menú ul li ul li{
+    display:none;
+}
+.menú ul li ul{
+    position: absolute;
+    background-color: #ff0000;
+}
+.menú ul li:hover > ul > li {
+    display: block;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #f2f2f2;
+}
+
+
+
+
+
+/* * ============================== */
+/* * ============ HEADER ========== */
+/* * ============================== */
+
+.navbar {
+	background: #FFCD48;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+    font-family: cursive;
+}
+
+.navbar a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+.contenedor-imagen {
+	height: 100vh;
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
+}
+
+/* * ============================== */
+/* * ============ MAIN ============ */
+/* * ============================== */
+
+main {
+	min-height: 100vh;
+}
+
+main .contenido p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+
+main .contenido .titulo {
+    font-family:'Times New Roman', Times, serif;
+	font-weight: 800;
+	padding-top: 40px;
+}
+
+main .contenido .fecha {
+	font-family: cursive;
+    font-size: 14px;
+	color: #B5B5B5;
+}
+
+main .contenido .textodad {
+font-family: cursive;
+color: #000;
+}
+
+
+
+/* * ============================== */
+/* * ============ ASIDE =========== */
+/* * ============================== */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #1D2F3D;
+	padding: 20px;
+	border-radius: 3px;
+    position: sticky;
+    top: 20px;
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #ffc400;
+    font-family: cursive;
+}
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+footer .navbar{
+position: sticky;
+bottom: 0;
+}
+
+
+/* * ============================== */
+/* * ====== MEDIA QUERIES ========= */
+/* * ============================== */
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	.contenedor-imagen {
+		height: 50vh;
+	}
+
+	main .contenedor {
+		flex-direction: column;
+	}
+    aside{
+        position: static;
+        margin: 40px 0 0 0;
+    }
+}
